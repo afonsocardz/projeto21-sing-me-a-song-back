@@ -13,7 +13,7 @@ async function recommendation(): Promise<CreateRecommendationData> {
 
 async function scoredRecommendation(score?: number | undefined): Promise<Recommendation> {
   if(!score){
-    score = Number(faker.random.numeric());
+    score = Number(faker.random.numeric(5));
   }
   return {
     id: Number(faker.random.numeric(2)),
